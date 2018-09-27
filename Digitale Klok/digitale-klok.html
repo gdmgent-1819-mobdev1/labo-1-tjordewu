@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <title>Digitale Klok - Tjorven Dewulf</title>
+    </head>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours()+6;
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').textContent =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+function startTimeNewYork() {
+    var today = new Date();
+    var hs = today.getHours()-6;
+    var ms= today.getMinutes();
+    var ss = today.getSeconds();
+    ms = checkTime(ms);
+    ss = checkTime(ss);
+    document.getElementById('txt2').textContent =
+    hs + ":" + ms + ":" + ss;
+    var t = setTimeout(startTimeNewYork, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+</script>
+</head>
+
+<body onload="startTime();startTimeNewYork();">
+<div class="flex1">
+<h2>Brussel</h2>
+<h2>New York</h2>
+</div>
+<div class="flex2">
+<div id="txt"></div>
+<div id="txt2"></div>
+</div>
+
+</body>
+</html>
