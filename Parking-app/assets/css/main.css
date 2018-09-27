@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    background-color: #222329;
+}
+
+.container{
+
+    max-width: 80%;
+    margin: auto;
+    padding-top: 18%;
+}
+
+#title{
+    font-size: 35px;
+    color: #222329;
+    text-align: center;
+    padding-bottom: 25px;
+    font-family: 'Roboto Slab', serif;
+    color: #2ecc71;
+    
+}
+
+.parking-spot {
+    max-width: 98%;
+    font-family: 'Lekton', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.parkingSlot {
+	max-width: 15%;
+    float: left;
+    box-sizing: border-box;
+	margin: 1%;
+}
+
+.parking-available {
+	color: green;
+}
+
+.parking-unavailable {
+	color: red;
+}
+
+.parking-green {
+	color: #2ecc71;
+}
+
+.parking-orange {
+	color: #f1c40f;
+}
+
+.parking-red {
+	color:#e74c3c;
+}
